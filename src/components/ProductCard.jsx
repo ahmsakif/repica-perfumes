@@ -1,12 +1,13 @@
+
 import Link from "next/link";
 
 const ProductCard = ({ perfume }) => {
   return (
-    <Link href={`/perfumes/${perfume.id}`} className="group block h-full">
-      <div className="bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 h-full flex flex-col">
+    <Link href={`/perfumes/${perfume.id}`} className=" h-full">
+      <div className="bg-white shadow-md border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 h-full flex flex-col">
         {/* Image */}
         <div className="relative h-80 w-full overflow-hidden bg-gray-100">
-          <img 
+          <img
             src={perfume.image} 
             alt={perfume.name} 
             className="w-full h-full object-cover group-hover:scale-105 transition duration-500"

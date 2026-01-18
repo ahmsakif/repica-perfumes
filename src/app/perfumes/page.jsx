@@ -24,7 +24,7 @@ export default async function PerfumesPage() {
   const perfumes = await getPerfumes();
 
   return (
-    <div className="min-h-screen bg-white py-12 md:py-20">
+    <div className="min-h-screen  py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* --- Header Section --- */}
