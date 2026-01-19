@@ -3,6 +3,7 @@ import BestSellers from "@/components/BestSellers";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Promo from "@/components/Promo";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <BestSellers />
       <Promo />
       <About />
+      <Testimonials />
     </div>
   );
 }
