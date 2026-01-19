@@ -6,7 +6,7 @@ export default function About() {
             <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-16">
                 <div className="w-full md:w-1/2">
                     <img
-                        src="https://images.unsplash.com/photo-1595425964071-789a2024b07e?q=80&w=1000&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1590736704728-f4730bb30770?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?q=80&w=1000&auto=format&fit=crop"
                         alt="About Repica"
                         className="rounded-lg shadow-xl w-full h-[500px] object-cover"
                     />
