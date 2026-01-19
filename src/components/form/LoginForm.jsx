@@ -43,7 +43,7 @@ export default function LoginForm() {
             />
         </div>
         <div>
-            <button className='btn w-full bg-blue-700 px-4 py-2 rounded-sm font-semibold text-sm text-white '>Sign in</button>
+            <button className='btn w-full bg-black px-4 py-2 rounded-sm font-semibold text-sm text-white '>Sign in</button>
         </div>
     </form>
 }
