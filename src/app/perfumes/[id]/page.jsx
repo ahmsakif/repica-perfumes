@@ -4,7 +4,7 @@ import React from 'react'
 
 async function getPerfume(id) {
     try{
-        const res = await fetch(`http://localhost:3000/api/perfumes/${id}`, {cache: "no-store"})
+        const res = await fetch(`${getBaseUrl}/api/perfumes/${id}`, {cache: "no-store"})
 
         if(!res.ok) return null
 

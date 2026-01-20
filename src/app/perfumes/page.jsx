@@ -1,11 +1,12 @@
 
 import ProductCard from "@/components/ProductCard";
+import { getBaseUrl } from "@/lib/getBaseUrl";
 import Link from "next/link";
 
 async function getPerfumes() {
   try {
 
-    const res = await fetch("/api/perfumes", { 
+    const res = await fetch(`${getBaseUrl}/api/perfumes`, { 
       cache: "no-store" 
     });
 
