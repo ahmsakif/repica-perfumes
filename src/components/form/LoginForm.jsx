@@ -13,11 +13,11 @@ export default function LoginForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (email === "admin@example.com" && password === '123456') {
+        if (email === "admin@repica.com" && password === 'RepicaSecret2026!') {
             document.cookie = "auth=true; path=/"
-            router.push("/perfumes")
+            window.location.href="/"
         } else {
-             
+             setError("Invalid credentials")
         }
         console.log(email, password);
     }
@@ -42,6 +42,8 @@ export default function LoginForm() {
                 className='mt-1 border rounded-sm px-4 py-2 text-sm w-full text-black border-gray-300 '
             />
         </div>
+        {error && <p className='text-sm text-red-600'>{error}</p>}
+
         <div>
             <button className='btn w-full bg-black px-4 py-2 rounded-sm font-semibold text-sm text-white '>Sign in</button>
         </div>
