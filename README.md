@@ -47,3 +47,8 @@ To run this project locally:
     ```bash
     npm install
     ```
+3. **Run the development server**
+    ```bash
+    npm run dev
+    ```
+4. **Open in browser** Visit [http://localhost:3000](http://localhost:3000)
