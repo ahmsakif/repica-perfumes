@@ -1,33 +1,36 @@
+
+import { getBaseUrl } from '@/lib/utils';
 import Link from 'next/link';
 import React from 'react'
 
 
 async function getPerfume(id) {
-    try{
-        const res = await fetch(`${getBaseUrl}/api/perfumes/${id}`, {cache: "no-store"})
+  try {
 
-        if(!res.ok) return null
+    const res = await fetch(`${getBaseUrl}/api/perfumes/${id}`, { cache: "no-store" })
 
-        return res.json()
-    } catch {
-        console.error("Error", error);
-        return null 
-    }
-    
+    if (!res.ok) return null
+
+    return res.json()
+  } catch {
+    console.error("Error", error);
+    return null
+  }
+
 }
 
 export default async function PerfumeDetails({ params }) {
 
-    const { id } = await params
-    const perfume = await getPerfume(id)
-    
-return (
+  const { id } = await params
+  const perfume = await getPerfume(id)
+
+  return (
     <div className="min-h-screen bg-white py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav className="mb-8 text-sm text-gray-500">
-           <Link href="/perfumes" className="hover:text-black">Shop</Link> / <span>{perfume.name}</span>
+          <Link href="/perfumes" className="hover:text-black">Shop</Link> / <span>{perfume.name}</span>
         </nav>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

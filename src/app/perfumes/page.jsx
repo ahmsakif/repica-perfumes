@@ -1,13 +1,14 @@
 
 import ProductCard from "@/components/ProductCard";
-import { getBaseUrl } from "@/lib/getBaseUrl";
+
+
 import Link from "next/link";
 
 async function getPerfumes() {
   try {
 
-    const res = await fetch(`${getBaseUrl}/api/perfumes`, { 
-      cache: "no-store" 
+    const res = await fetch(`https://repica-perfumes.vercel.app/api/perfumes`, {
+      cache: "no-store"
     });
 
     if (!res.ok) {
@@ -17,7 +18,7 @@ async function getPerfumes() {
     return res.json();
   } catch (error) {
     console.error("Load Error:", error);
-    return []; 
+    return [];
   }
 }
 
@@ -27,7 +28,7 @@ export default async function PerfumesPage() {
   return (
     <div className="min-h-screen  py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* --- Header Section --- */}
         <div className="text-center mb-16">
           <p className="text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">
@@ -54,7 +55,7 @@ export default async function PerfumesPage() {
             <h3 className="text-xl font-bold text-gray-900">No perfumes found</h3>
           </div>
         )}
-        
+
         {/* --- Back Home Button --- */}
         <div className="mt-16 text-center">
           <Link href="/" className="text-sm font-bold text-gray-900 border-b-2 border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition">
