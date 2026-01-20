@@ -1,5 +1,5 @@
 
-import { getBaseUrl } from '@/lib/utils';
+
 import Link from 'next/link';
 import React from 'react'
 
@@ -7,7 +7,7 @@ import React from 'react'
 async function getPerfume(id) {
   try {
 
-    const res = await fetch(`${getBaseUrl}/api/perfumes/${id}`, { cache: "no-store" })
+    const res = await fetch(`https://repica-perfumes.vercel.app/api/perfumes/${id}`, { cache: "no-store" })
 
     if (!res.ok) return null
 
