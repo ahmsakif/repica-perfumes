@@ -5,7 +5,7 @@ import Link from "next/link";
 async function getPerfumes() {
   try {
 
-    const res = await fetch("http://localhost:3000/api/perfumes", { 
+    const res = await fetch("/api/perfumes", { 
       cache: "no-store" 
     });
 
