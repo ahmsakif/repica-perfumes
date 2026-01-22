@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 async function getBestSellers() {
   try {
-    const res = await fetch("http://localhost:3000/api/perfumes", { cache: "no-store" });
+    const res = await fetch("https://repica-perfumes.vercel.app/api/perfumes", { cache: "no-store" });
     const data = await res.json();
     return data.slice(0, 3);
   } catch (e) {
